@@ -103,6 +103,7 @@ original_magma_r = plt.get_cmap("magma_r", 256)  # Use 256 colors for better gra
 # Truncate the first 15% (this removes the brightest yellow and starts at a deeper gold)
 # Then sample 256 colors from that starting point to the end (black)
 truncated_colors = original_magma_r(np.linspace(0.15, 1.0, 256))
+truncated_colors = truncated_colors[::-1]
 custom_magma_r = mcolors.ListedColormap(truncated_colors)
 
 cmap_links = custom_magma_r
